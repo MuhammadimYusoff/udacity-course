@@ -32,7 +32,11 @@ class UnitConverterApp extends StatelessWidget {
             ),
         // This colors the [InputOutlineBorder] when it is selected
         primaryColor: Colors.grey[500],
-        textSelectionHandleColor: Colors.green[500],
+//         'textSelectionHandleColor: Colors.green[500],' property is deprecatd on v1.19, you will get deprecation notice if you use this.
+//         Instead use below:
+        textSelectionTheme: TextSelectionThemeData(
+        selectionHandleColor: Colors.green[500],
+        ),
       ),
       home: CategoryRoute(),
     );
